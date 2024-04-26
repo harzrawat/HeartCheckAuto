@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gutim Template">
+    <meta name="keywords" content="Gutim, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gutim | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css">    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo">
+                <a href="{{ url_for('index1') }}">
+                    <img width="100vw" src="{{ url_for('static', filename='img/bg_logo.jpg') }}" alt=""> <!-- Adjust the image path accordingly -->
+                </a>
+            </div>
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="{{ url_for('index1') }}">Home</a></li>
+                        <li><a href="{{ url_for('prediction') }}">Prediction</a></li> <!-- Adjust the route accordingly -->
+                        <li><a href="{{ url_for('index1') }}">Chat</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section style="margin-top: 70px;" class="hero-section set-bg" data-setbg="{{ url_for('static', filename='img/bg_top.jpeg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Prediction</h2>
+                        <div style="background-color: wheat; padding: 5px 10px; width: fit-content; border-radius: 10px;box-shadow: 5px 5px 3px red; "  class="breadcrumb-option">
+                            <a href="{{ url_for('index1') }}"><i class="fa fa-home"></i> Home</a>
+                            <span>Prediction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <section class="prediction" style="display: flex; justify-content: space-around; align-items: center;flex: 0 0 calc(50% - 5px);">
+        <div class="prediction-form">
+            <!-- appointment Section Begin -->
+            <section class="register-section spad">
+                <div class="form-body">
+                    <div class="form-container">
+                        <form id="user-info-form" action="/form" method="post">
+                            <h2>Get a <span style="color: red; font-weight: 900;">HEART FIT</span> CheckUp</h2>
+                            <div class="form-group">
+                                <label for="name">Name<span>*</span>:</label>
+                                <input type="text" id="name" name="name" placeholder="your name" required>
+                            </div>
+                        <div class="form-group">
+                            <label for="age">Age<span>*</span>:</label>
+                            <input type="number" id="age" name="age" placeholder="your age" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender<span>*</span>:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hypertension">Hypertension<span>*</span>:</label>
+                            <input type="number" id="hypertension" name="hypertension" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="heart_disease">Heart Disease<span>*</span>:</label>
+                            <select id="heart_disease" name="heart_disease" required>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ever_married">Ever Married<span>*</span>:</label>
+                            <select id="ever_married" name="ever_married" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="work_type">Work Type<span>*</span>:</label>
+                            <select id="work_type" name="work_type" required>
+                            <option value="Private" selected>Private</option>
+                            <option value="Self-employed">Self-employed</option>
+                            <option value="Govt_job">Govt_job</option>
+                            <option value="children">Children</option>
+                            <option value="Never_worked">Never worked</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="residence_type">Residence Type<span>*</span>:</label>
+                            <select id="residence_type" name="residence_type" required>
+                            <option value="Urban" selected>Urban</option>
+                            <option value="Rural">Rural</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="avg_glucose_level">Average Glucose Level<span>*</span>:</label>
+                            <input type="number" id="avg_glucose_level" name="avg_glucose_level" placeholder="your avg glucose level" required>
+                        </div>
+                        <div class="form-group">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div>
+                                    <label for="height">Height<span>*</span>:</label>
+                                    <input type="number" id="height" name="height" placeholder="in m" required>
+                                </div>
+                                <div>
+                                    <label for="weight">Weight<span>*</span>:</label>
+                                    <input type="number" id="weight" name="weight" placeholder="in kg" required>
+                                </div>
+                            </div>
+                            <label for="bmi">BMI:</label>
+                            <input type="number" id="bmi" name="bmi" placeholder="BMI" step="any">
+                        </div>
+                        <div class="form-group">
+                            <label for="smoking_status">Smoking Status<span>*</span>:</label>
+                            <select id="smoking_status" name="smoking_status" required>
+                            <option value="smokes" selected>Smokes</option>
+                            <option value="formerly_smoked">Formerly Smoked</option>
+                            <option value="never_smoked">Never Smoked</option>
+                            <option value="Unknown">Unknown</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- appointment Section End -->
+        </div>
+        <div class="predition-result">
+            <section class="register-section spad">
+                <div class="form-body">
+                    <div class="form-container">
+                        <h3>Heart disease Analysis based on the data </h3>
+                        <p><span>Disclaimer</span> : Consideration of the data by a patient is sole responsibity of the patient him/herself.</p>
+                        <p style="background: wheat; width: fit-content; padding: 5px 10px; border-radius: 10px;">{{messege1}}</p>
+                        <!-- <p>{{messege2}}</p> -->
+
+                        {% if messege1 %}
+                            <section class="appointment-section">
+                                <div class="appointment-container">
+                                    <h2>Get an Appointment !</h2>
+                                    <form action="/doctor" method="post">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mobile">Mobile No.</label>
+                                            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="doctor">Doctor</label>
+                                            <select id="doctor" name="doctor" required>
+                                                <option value="">Select a Doctor</option>
+                                                <option value="John">John</option>
+                                                <option value="Jane">Jane</option>
+                                                <option value="Michael">Michael</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="date">Date</label>
+                                            <input type="date" id="date" name="date" required>
+                                        </div>
+                                        <button type="submit" class="btn-submit">Submit</button>
+                                    </form>
+                                </div>
+                            </section>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </section>
+
+    {% if messege_completed %}
+        <div style="position: absolute; display: flex; z-index: 3;justify-content: center;align-items: center;width: 100vw;height: 100vh;top: 0px;">
+            <h2 style=" background: wheat; border-radius: 10px; color: red; font-weight: 900;">{{ messege_completed }}</h2>
+        </div>
+    {% endif %}
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Phone</span>
+                        <p>1234567890,  9087654321</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Address</span>
+                        <p>34 H x road, old Village New Delhi </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Email</span>
+                        <p>fitheart@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text">
+                <ul>
+                    <li><a href="#">Term&Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p>&copy;<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mixitup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      var heightInput = document.getElementById('height');
+      var weightInput = document.getElementById('weight');
+      var bmiInput = document.getElementById('bmi');
+    
+      // Function to calculate BMI
+      function calculateBMI() {
+        var height = parseFloat(heightInput.value);
+        var weight = parseFloat(weightInput.value);
+        
+        // Check if both height and weight are provided
+        if (!isNaN(height) && !isNaN(weight) && height > 0 && weight > 0) {
+          var bmi = weight / (height * height); // Calculate BMI
+          bmiInput.value = bmi.toFixed(2); // Display BMI with 2 decimal places
+        } else {
+          bmiInput.value = ''; // Clear BMI if height or weight is missing or invalid
+        }
+      }
+    
+      // Add event listeners to height and weight inputs
+      heightInput.addEventListener('input', calculateBMI);
+      weightInput.addEventListener('input', calculateBMI);
+    });
+    
+      </script>
+</body>
+
+</html>

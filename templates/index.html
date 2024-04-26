@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gutim Template">
+    <meta name="keywords" content="Gutim, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gutim | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css">    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img width="100vw" src="{{ url_for('static', filename='img/bg_logo.jpg') }}" alt=""> <!-- Adjust the image path accordingly -->
+                </a>
+            </div>
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="{{ url_for('index1') }}">Home</a></li>
+                        <li><a href="{{ url_for('prediction') }}">Prediction</a></li> <!-- Adjust the route accordingly -->
+                        <li><a href="{{ url_for('index1') }}">Chat</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+   
+    <section style="margin-top: 70px;" class="hero-section set-bg" data-setbg="{{ url_for('static', filename='img/bg_top.jpeg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-text">
+                        <span>Health Tool</span>
+                        <h1>Heart Diagnosis</h1>
+                        <p>Fit Heart is the comrehensive tool to diagnose any <br /> heart disease</p>
+                        <a href="#" class="primary-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<br>
+
+    <!-- doctor Section Begin -->
+    <section class="doctor-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Expert Doctors</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-doctor-item">
+                        <img src="{{ url_for('static', filename='img/doctor_profile.jpg') }}" alt="">
+                        <div class="doctor-text">
+                            <h5>Dr. Person1</h5>
+                            <span>Cardiologist</span>
+                            <p>Here all the specialisation and qualification of the doctor will be displayed.</p>
+                            <div class="doctor-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-doctor-item">
+                        <img src="{{ url_for('static', filename='img/doctor_lady.jpg') }}" alt="">
+                        <div class="doctor-text">
+                            <h5>Dr. Person 2</h5>
+                            <span>Hematologists</span>
+                            <p>Here all the specialisation and qualification of the doctor will be displayed.</p>
+                            <div class="doctor-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-doctor-item">
+                        <img src="{{ url_for('static', filename='img/doctors.png') }}" alt="">
+                        <div class="doctor-text">
+                            <h5>Team</h5>
+                            <span>A Group of specialised Doctors</span>
+                            <p>We are commited to serve you to the best of your health.</p>
+                            <div class="doctor-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- doctor Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Patient Reviews</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="testimonial-item">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus officia distinctio aliquid ducimus, asperiores nemo corporis aliquam ex dolore, exercitationem inventore fugit esse cumque omnis voluptate voluptatum neque? Optio? </p>
+                            <div class="ti-pic">
+                                <img src="{{ url_for('static', filename='img/patient1.png') }}" alt="">
+                                <div class="quote">
+                                    <img src="img/testimonial/quote-left.png" alt="">
+                                </div>
+                            </div>
+                            <div class="ti-author">
+                                <h4>Patient 1</h4>
+                                <span>Lucknow</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae eaque consequuntur corporis, libero temporibus eveniet, aspernatur ratione dolorem deleniti, nostrum sequi voluptates sint. Assumenda sunt blanditiis ullam quia, ad perspiciatis? </p>
+                            <div class="ti-pic">
+                                <img src="{{ url_for('static', filename='img/patient1.png') }}" alt="">
+                                <div class="quote">
+                                    <img src="{{ url_for('static', filename='img/testimonial/quote-left.png') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="ti-author">
+                                <h4>Patient 2</h4>
+                                <span>New Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+
+
+
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Phone</span>
+                        <p>1234567890,  9087654321</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Address</span>
+                        <p>34 H x road, old Village New Delhi </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Email</span>
+                        <p>fitheart@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-text">
+                <ul>
+                    <li><a href="#">Term&Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p>&copy;<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mixitup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      var heightInput = document.getElementById('height');
+      var weightInput = document.getElementById('weight');
+      var bmiInput = document.getElementById('bmi');
+    
+      // Function to calculate BMI
+      function calculateBMI() {
+        var height = parseFloat(heightInput.value);
+        var weight = parseFloat(weightInput.value);
+        
+        // Check if both height and weight are provided
+        if (!isNaN(height) && !isNaN(weight) && height > 0 && weight > 0) {
+          var bmi = weight / (height * height); // Calculate BMI
+          bmiInput.value = bmi.toFixed(2); // Display BMI with 2 decimal places
+        } else {
+          bmiInput.value = ''; // Clear BMI if height or weight is missing or invalid
+        }
+      }
+    
+      // Add event listeners to height and weight inputs
+      heightInput.addEventListener('input', calculateBMI);
+      weightInput.addEventListener('input', calculateBMI);
+    });
+    
+      </script>
+</body>
+
+</html>

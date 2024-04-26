@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to FIT HEART</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("{{ url_for('static', filename='img/bg_top.jpeg') }}"); /* Path to your image in the static folder */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            z-index: 1;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+        .hidden-form {
+            display: none;
+        }
+
+        .logo {
+            z-index: 3;
+            width: 100px;
+            height: 100px;
+            background-color: #007bff; /* Example background color */
+            border-radius: 50%; /* Makes it circular */
+            position: relative; /* Position absolute for placing it at the top of the container */
+            top: -50px; /* Adjust the top position as needed */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; /* Text color */
+            font-size: 24px; /* Adjust font size as needed */
+            overflow: hidden;
+        }
+        .logo img {
+            max-width: 100%; /* Ensure image doesn't exceed the width of its parent */
+            max-height: 100%; /* Ensure image doesn't exceed the height of its parent */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo"><img src="{{ url_for('static',filename='img/bg_logo.jpg') }}" alt=""></div>
+
+        <h1>Login to FIT HEART</h1>
+        {% if email %}
+        <!-- Form is hidden if input_value exists -->
+        <form id="emailForm" action="/send_otp" method="post" class="hidden-form">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="hidden" id="hiddenEmail" name="hiddenEmail" readonly> <!-- Hidden input field to store email -->
+            <button type="submit">Send OTP</button>
+        </form>
+        {% else %}
+            <!-- Form is displayed if input_value doesn't exist -->
+            <form id="emailForm" action="/send_otp" method="post">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="hidden" id="hiddenEmail" name="hiddenEmail" readonly> <!-- Hidden input field to store email -->
+                <button type="submit">Send OTP</button>
+            </form>
+        {% endif %}
+
+        {% if email %}
+        <form>
+            <!-- Use value="{{ input_value }}" to set the default value -->
+            <input type="text" id="myInput" name="myInput" placeholder="{{ email }}">
+            <!-- <input type="submit" value="Submit"> -->
+        </form>
+        {% endif %}
+
+
+        <form action="/verify_otp" method="post">
+            <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+            
+            <!-- Display email -->
+            <div id="emailDisplay"></div>
+            {% if messege %}
+                <p class="error">{{ messege }}</p>
+            {% endif %}
+
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+
+</body>
+</html>
