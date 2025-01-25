@@ -1,8 +1,40 @@
+
 # HeartCheckAuto 🫀🩺
 
 ## 📝 Overview
 
 This Flask-based web application is designed to predict heart stroke probabilities using machine learning and provide comprehensive healthcare management features. By leveraging logistic regression and secure authentication, the application offers users insights into their potential heart stroke risks and facilitates doctor appointments.
+
+
+## 👥 Team Contributions
+
+### Project Team Members
+* **[Harsh Rawat](https://github.com/harzrawat)** | Project Lead & Backend Developer
+* **[Satyam Kumar Pandey](https://github.com/satyampandey1411)**| Frontend Developer
+* **[Yash Chittora](https://github.com/yashchittora)** |  Database Specialist 
+* **[Kirtan Khichi ](https://github.com/deepalitomar021)** | Machine Learning Engineer
+* **[Kajol Kahipuri](https://github.com/kajolkahipuri)** | UI/UX Designer
+* **[Deepali Tomar](https://github.com/kirtankhichi)** | Authentication & Security Expert  
+
+### Individual Contributions
+
+#### Harsh Rawat
+Architected the Flask application framework and developed comprehensive backend routing. Managed project coordination and GitHub repository infrastructure.
+
+#### Satyam Kumar Pandey
+Created responsive frontend interface with dynamic HTML5, CSS3, and JavaScript. Ensured cross-browser and mobile-responsive design compatibility.
+
+#### Yash Chittora     
+Designed normalized PostgreSQL database schema and implemented efficient data storage mechanisms. Optimized database query performance and indexing.
+
+#### Kirtan Khichi 
+Designed and implemented the logistic regression machine learning model. Performed data preprocessing and conducted model accuracy optimization.
+
+#### Kajol Kahipuri
+Conducted UX research and created wireframes and interactive prototypes. Executed usability testing and refined application's visual design and interaction flows.
+
+#### Deepali Tomar
+Implemented robust user authentication mechanisms and secure OTP verification system. Conducted security vulnerability assessments and data protection strategies.
 
 ## ✨ Features
 
@@ -109,14 +141,8 @@ We welcome contributions to improve the Heart Stroke Prediction Application!
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is open-source. Please check the LICENSE file for details.
 
-### MIT License Highlights
-- Commercial use allowed
-- Modification permitted
-- Distribution allowed
-- Private use allowed
-- No warranty
 
 ## 📞 Contact & Support
 
@@ -135,4 +161,4 @@ For bugs, feature requests, or support, please [open an issue](https://github.co
 
 ---
 
-**Made with ❤️ by the Heart Stroke Prediction Team**
+**Made with ❤️ by the HeartCheckAuto Team**
