@@ -1,99 +1,138 @@
+# HeartCheckAuto 🫀🩺
 
-# Heart Stroke Prediction Flask Application
+## 📝 Overview
 
-This is a Flask-based web application designed to predict the chances of a heart stroke based on basic medical data. The application uses a logistic regression model trained on medical data to provide predictions. Additionally, it includes features for booking appointments with doctors and managing patient data.
+This Flask-based web application is designed to predict heart stroke probabilities using machine learning and provide comprehensive healthcare management features. By leveraging logistic regression and secure authentication, the application offers users insights into their potential heart stroke risks and facilitates doctor appointments.
 
-## Features
+## ✨ Features
 
-- **Heart Stroke Prediction**: Users can input their medical data, and the application will predict the likelihood of a heart stroke using a pre-trained logistic regression model.
-- **Appointment Booking**: Users can book appointments with doctors, and the data is stored in a PostgreSQL database.
-- **OTP Verification**: Secure OTP-based email verification for user authentication.
-- **Patient Data Management**: Stores patient data in a PostgreSQL database for future reference.
+- **Advanced Heart Stroke Prediction**
+  - Machine learning-powered risk assessment
+  - Comprehensive medical data analysis
+  - Precise logistic regression model predictions
 
-## Prerequisites
+- **Secure User Authentication**
+  - One-Time Password (OTP) email verification
+  - Robust security protocols
+  - User data protection
 
-Before running the application, ensure you have the following installed:
+- **Healthcare Management**
+  - Doctor appointment booking system
+  - Patient data storage and management
+  - Seamless PostgreSQL database integration
 
-- Python 3.x
-- PostgreSQL
-- Flask
-- Flask-Mail
-- psycopg2
-- pandas
-- scikit-learn
-- pickle
+## 🖥️ Screenshots
 
-## Installation
+### Landing Page
+![Landing Page](/static/screenshots/landing_page.png)
 
-1. **Clone the repository**:
+### Prediction Interface
+![Prediction Interface](/static/screenshots/prediction_interface.png)
+
+### Appointment Booking
+![Appointment Booking](/static/screenshots/listed_doctors.png)
+
+## 🛠️ Technologies Used
+
+- **Backend**: Flask, Python
+- **Machine Learning**: scikit-learn, Logistic Regression
+- **Database**: PostgreSQL
+- **Authentication**: Flask-Mail, OTP Verification
+- **Frontend**: HTML, CSS, JavaScript
+
+## 📋 Prerequisites
+
+- Python 3.8+
+- PostgreSQL 12+
+- pip package manager
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/harzrawat/HeartCheckAuto.git
+cd heart-stroke-prediction
+```
+
+### 2. Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # Unix/macOS
+venv\Scripts\activate     # Windows
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Database Setup
+- Create PostgreSQL database named `dhp`
+- Update database credentials in `app.py`
+
+### 5. Run the Application
+```bash
+python app.py
+```
+
+## 🤝 Contributing
+
+We welcome contributions to improve the Heart Stroke Prediction Application!
+
+### Contribution Guidelines
+
+1. **Fork the Repository**
+   - Create your personal fork of the project
+   - Clone your forked repository
+
+2. **Create a Branch**
    ```bash
-   git clone https://github.com/harzrawat/HeartCheckAuto.git
-   cd heart-stroke-prediction
+   git checkout -b feature/your-feature-name
    ```
 
-2. **Set up a virtual environment**:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+3. **Commit Changes**
+   - Write clear, descriptive commit messages
+   - Follow PEP 8 style guidelines
+   - Include comments for complex logic
 
-3. **Install the required packages**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+4. **Pull Request Process**
+   - Describe your changes in the pull request
+   - Include screenshots for visual changes
+   - Ensure all tests pass
 
-4. **Set up the PostgreSQL database**:
-   - Create a database named `dhp`.
-   - Update the database connection settings in the `app.py` file if necessary:
-     ```python
-     conn = psycopg2.connect(
-         dbname="your_db_name",
-         user="your_username",
-         password="your_password",
-         host="localhost"
-     )
-     ```
+### Areas for Contribution
+- Machine learning model improvements
+- UI/UX enhancements
+- Additional healthcare features
+- Performance optimization
+- Bug fixes and documentation
 
-5. **Run the application**:
-   ```bash
-   python app.py
-   ```
+## 📄 License
 
-6. **Access the application**:
-   Open your web browser and go to `http://127.0.0.1:5000/`.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Usage
+### MIT License Highlights
+- Commercial use allowed
+- Modification permitted
+- Distribution allowed
+- Private use allowed
+- No warranty
 
-1. **Login and OTP Verification**:
-   - Enter your email to receive an OTP.
-   - Verify the OTP to proceed.
+## 📞 Contact & Support
 
-2. **Heart Stroke Prediction**:
-   - Navigate to the prediction page.
-   - Enter your medical data and submit the form to get the prediction.
+**Project Maintainer**: Harsh Rawat
+- **Email**: su-23011@sitare.org
+- **GitHub**: [harzrawat](https://github.com/harzrawat)
 
-3. **Book an Appointment**:
-   - Navigate to the doctor's page.
-   - Enter your details and book an appointment.
+For bugs, feature requests, or support, please [open an issue](https://github.com/harzrawat/HeartCheckAuto/issues).
 
-## File Structure
+## 🙏 Acknowledgments
 
-- `app.py`: Main Flask application file.
-- `doc_app.py`: Additional Flask routes for doctor-related functionalities.
-- `logistic_regression_model.pkl`: Pre-trained logistic regression model for heart stroke prediction.
-- `templates/`: Contains HTML templates for the web pages.
-- `static/`: Contains static files like CSS and JavaScript.
+- Flask Community
+- scikit-learn Developers
+- Open Source Contributors
+- Our Dedicated Users
 
-## Contributing
+---
 
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
-
-
-## Acknowledgments
-
-- Thanks to the developers of Flask, scikit-learn, and other libraries used in this project.
-- Special thanks to the open-source community for their contributions.
-
-## Contact
-
-For any questions or feedback, please contact [Harsh Rawat] at [su-23011@sitare.org].
+**Made with ❤️ by the Heart Stroke Prediction Team**
