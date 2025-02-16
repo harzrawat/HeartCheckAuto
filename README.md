@@ -13,7 +13,7 @@ This Flask-based web application is designed to predict heart stroke probabiliti
 * **[Satyam Kumar Pandey](https://github.com/satyampandey1411)** | Frontend Developer
 * **[Yash Chittora](https://github.com/YashUchittora)** |  Database Specialist 
 * **[Kirtan Khichi ](https://github.com/deepalitomar021)** | Machine Learning Engineer
-* **[Kajol Kahipuri](https://github.com/kajolkahipuri)** | UI/UX Designer
+* **[Kajol Kashipuri](https://github.com/kajolkahipuri)** | UI/UX Designer
 * **[Deepali Tomar](https://github.com/kirtankhichi)** | Authentication & Security Expert  
 
 ### Individual Contributions
